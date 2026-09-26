@@ -147,6 +147,7 @@ void model2_mesh_apply_texture_state(model2_mesh_collector_t *mesh, model2_tex_s
         p->patch_y = 0;
         p->patch_w = 32;
         p->patch_h = 32;
+        p->z_adjust = geo->z_adjust;
         for (k = 0; k < MODEL2_MESH_MAX_INDICES; k++) {
             p->u[k] = 0.f;
             p->v[k] = 0.f;
