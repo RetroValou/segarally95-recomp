@@ -11,6 +11,11 @@
 #if defined(__APPLE__)
 #include <OpenGL/gl.h>
 #else
+#if defined(__linux__)
+#define GL_GLEXT_PROTOTYPES 1
+#include <GL/gl.h>
+//#include <GL/glext.h>
+#else
 #ifdef _WIN32
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
@@ -18,6 +23,7 @@
 #include <windows.h>
 #endif
 #include <GL/gl.h>
+#endif
 #endif
 
 #ifndef GL_CLAMP_TO_EDGE
